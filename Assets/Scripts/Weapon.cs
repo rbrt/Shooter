@@ -5,6 +5,7 @@ using System.Linq;
 public class Weapon : MonoBehaviour {
 
 	[SerializeField] protected Light muzzleFlash;
+	[SerializeField] protected ParticleSystem gunshotParticle;
 	[SerializeField] protected float damage,
 						   			 reloadTime;
 
@@ -17,22 +18,29 @@ public class Weapon : MonoBehaviour {
 
 	bool shooting = false;
 
-	public void Fire(){
-		if (!shooting){
+	public void Fire()
+	{
+		if (!shooting)
+		{
 			shooting = true;
 			this.StartCoroutine(Shoot());
 		}
 	}
 
-	IEnumerator Shoot(){
+	IEnumerator Shoot()
+	{
 		hitscanTransform.transform.localScale = new Vector3(200,40,.1f);
 
 		animator.Play("Fire");
+		gunshotParticle.Play();
+		this.StartCoroutine(FlashMuzzleFlare());
 
 		var allPlayers = PlayerController.GetAllPlayers().Where(x => x != player).ToList();
-		for (int i = 0; i < allPlayers.Count; i++){
-			if (hitscanTransform.GetComponent<BoxCollider>().bounds.Contains(allPlayers[i].transform.position)){
-//				Debug.Log("HIT " + allPlayers[i]);
+		for (int i = 0; i < allPlayers.Count; i++)
+		{
+			if (hitscanTransform.GetComponent<BoxCollider>().bounds.Contains(allPlayers[i].transform.position))
+			{
+				Debug.Log("HIT " + allPlayers[i]);
 			}
 		}
 
@@ -41,6 +49,13 @@ public class Weapon : MonoBehaviour {
 		yield return new WaitForSeconds(1.3f);
 
 		shooting = false;
+	}
+
+	IEnumerator FlashMuzzleFlare()
+	{
+		muzzleFlash.enabled = true;
+		yield return new WaitForSeconds(.1f);
+		muzzleFlash.enabled = false;
 	}
 
 
