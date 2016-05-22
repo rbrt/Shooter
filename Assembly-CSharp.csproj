@@ -58,6 +58,7 @@
      <None Include="Assets\Plugins\Edelweiss Library\Coroutine\SafeCoroutine.Runtime.xml" />
      <None Include="Assets\Plugins\Edelweiss Library\Coroutine\Readme.txt" />
      <None Include="Assets\Plugins\Edelweiss Library\Coroutine\Notifier.Runtime.xml" />
+     <None Include="Assets\Shaders\SkyboxShader.shader" />
      <None Include="Assets\Shaders\FullscreenDisplay.shader" />
      <None Include="Assets\Plugins\Edelweiss Library\Coroutine\Release Notes.txt" />
  <Reference Include="UnityEngine.UI">

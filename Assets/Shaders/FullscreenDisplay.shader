@@ -4,8 +4,8 @@
 	{
 		_UpperScreen ("Texture", 2D) = "white" {}
 		_LowerScreen ("Texture", 2D) = "white" {}
-		_UpperPain ("Float", Range(0,1)) = 0
-		_LowerPain ("Float", Range(0,1)) = 0
+		_UpperPain ("UpperPain", Range(0,1)) = 0
+		_LowerPain ("LowerPain", Range(0,1)) = 0
 	}
 	SubShader
 	{
