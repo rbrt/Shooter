@@ -46,16 +46,31 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\Display\FullscreenDisplay.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
+     <Compile Include="Assets\Scripts\SafeCoroutine\SafeCoroutine.cs" />
+     <Compile Include="Assets\Scripts\SafeCoroutine\SafeCoroutineExtension.cs" />
+     <Compile Include="Assets\Scripts\SafeCoroutine\SafeCoroutineState.cs" />
      <Compile Include="Assets\Scripts\Shotgun.cs" />
      <Compile Include="Assets\Scripts\UI\GUI.cs" />
      <Compile Include="Assets\Scripts\Weapon.cs" />
+     <None Include="Assets\Plugins\Edelweiss Library\Coroutine\SafeCoroutine.Runtime.xml" />
+     <None Include="Assets\Plugins\Edelweiss Library\Coroutine\Readme.txt" />
+     <None Include="Assets\Plugins\Edelweiss Library\Coroutine\Notifier.Runtime.xml" />
+     <None Include="Assets\Shaders\FullscreenDisplay.shader" />
+     <None Include="Assets\Plugins\Edelweiss Library\Coroutine\Release Notes.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="SafeCoroutine.Runtime">
+ <HintPath>/Users/rob/programming/Shooter/Assets/Plugins/Edelweiss Library/Coroutine/SafeCoroutine.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Notifier.Runtime">
+ <HintPath>/Users/rob/programming/Shooter/Assets/Plugins/Edelweiss Library/Coroutine/Notifier.Runtime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

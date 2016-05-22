@@ -17,11 +17,12 @@ public class PlayerStats : MonoBehaviour {
 		if (playerNumber.Equals(PlayerNumbers.Player1))
 		{
 			GUI.Instance.SetP1HealthText(playerHealth);
+            FullscreenDisplay.Instance.TriggerUpperPain();
 		}
 		else if (playerNumber.Equals(PlayerNumbers.Player2))
 		{
 			GUI.Instance.SetP2HealthText(playerHealth);
+            FullscreenDisplay.Instance.TriggerLowerPain();
 		}
-
 	}
 }
