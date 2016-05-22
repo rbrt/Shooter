@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Linq;
 
-public class Weapon : MonoBehaviour {
+public class Weapon : MonoBehaviour
+{
 
 	[SerializeField] protected Light muzzleFlash;
 	[SerializeField] protected ParticleSystem gunshotParticle;
@@ -11,15 +12,15 @@ public class Weapon : MonoBehaviour {
 
 	[SerializeField] protected Animator animator;
 
-	[SerializeField] bool hitscan;
-	[SerializeField] GameObject hitscanTransform;
+	[SerializeField] protected bool hitscan;
+	[SerializeField] protected GameObject hitscanTransform;
 
 	[SerializeField] protected PlayerController player;
 
-	bool shooting = false;
-	BoxCollider hitscanCollider;
+	protected bool shooting = false;
+	protected BoxCollider hitscanCollider;
 
-	void Awake()
+	protected void Awake()
 	{
 		hitscanCollider = hitscanTransform.GetComponent<BoxCollider>();
 	}
@@ -33,7 +34,7 @@ public class Weapon : MonoBehaviour {
 		}
 	}
 
-	bool PointInOABB (Vector3 point, BoxCollider box )
+	protected bool PointInOABB (Vector3 point, BoxCollider box )
  	{
          point = box.transform.InverseTransformPoint( point ) - box.center;
 
@@ -53,39 +54,22 @@ public class Weapon : MonoBehaviour {
 
  	 }
 
-	 int GetWeaponDamage()
-	 {
-		 return 5;
-	 }
-
-	IEnumerator Shoot()
+	public virtual int GetWeaponDamage(float distance)
 	{
-		hitscanTransform.transform.localScale = new Vector3(200,40,7.5f);
-
-		animator.Play("Fire");
-		gunshotParticle.Play();
-		this.StartCoroutine(FlashMuzzleFlare());
-
-		var allPlayers = PlayerController.GetAllPlayers().Where(x => x != player).ToList();
-		for (int i = 0; i < allPlayers.Count; i++)
-		{
-			if (PointInOABB(allPlayers[i].transform.position, hitscanCollider))
-			{
-				Debug.Log("HIT " + allPlayers[i], allPlayers[i].gameObject);
-				allPlayers[i].GetComponent<PlayerStats>().TakeDamage(GetWeaponDamage());
-			}
-		}
-
-		yield return new WaitForSeconds(1.3f);
-
-		shooting = false;
+		Debug.LogWarning("GetDamage not implemented");
+		return 0;
 	}
 
-	IEnumerator FlashMuzzleFlare()
+	public virtual IEnumerator Shoot()
 	{
-		muzzleFlash.enabled = true;
-		yield return new WaitForSeconds(.1f);
-		muzzleFlash.enabled = false;
+		Debug.LogWarning("Shoot not implemented");
+		yield break;
+	}
+
+	public virtual IEnumerator FlashMuzzleFlare()
+	{
+		Debug.LogWarning("MuzzleFlash not implemented");
+		yield break;
 	}
 
 
