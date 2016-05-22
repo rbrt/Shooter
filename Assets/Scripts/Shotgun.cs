@@ -15,25 +15,26 @@ public class Shotgun : Weapon
 
    public override IEnumerator Shoot()
    {
-	   hitscanTransform.transform.localScale = new Vector3(200,40,7.5f);
+        hitscanTransform.transform.localScale = new Vector3(200,40,7.5f);
 
-	   animator.Play("Fire");
-	   gunshotParticle.Play();
-	   this.StartCoroutine(FlashMuzzleFlare());
+        animator.Play("Fire");
+        gunshotParticle.Play();
+        this.StartCoroutine(FlashMuzzleFlare());
+        AudioManager.Instance.PlayOneShotClip(weaponFireEffect);
 
-	   var allPlayers = PlayerController.GetAllPlayers().Where(x => x != player).ToList();
-	   for (int i = 0; i < allPlayers.Count; i++)
-	   {
-		   if (PointInOABB(allPlayers[i].transform.position, hitscanCollider))
-		   {
-			   float distance = (allPlayers[i].transform.position - transform.position).magnitude;
-			   allPlayers[i].GetComponent<PlayerStats>().TakeDamage(GetWeaponDamage(distance));
-		   }
-	   }
+        var allPlayers = PlayerController.GetAllPlayers().Where(x => x != player).ToList();
+        for (int i = 0; i < allPlayers.Count; i++)
+        {
+           if (PointInOABB(allPlayers[i].transform.position, hitscanCollider))
+           {
+        	   float distance = (allPlayers[i].transform.position - transform.position).magnitude;
+        	   allPlayers[i].GetComponent<PlayerStats>().TakeDamage(GetWeaponDamage(distance));
+           }
+        }
 
-	   yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(1.3f);
 
-	   shooting = false;
+        shooting = false;
    }
 
    public override IEnumerator FlashMuzzleFlare()

@@ -17,6 +17,8 @@ public class Weapon : MonoBehaviour
 
 	[SerializeField] protected PlayerController player;
 
+    [SerializeField] protected AudioClip weaponFireEffect;
+
 	protected bool shooting = false;
 	protected BoxCollider hitscanCollider;
 
