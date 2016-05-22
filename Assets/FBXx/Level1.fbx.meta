@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: b00508436610b44bc929a5892bb15ac2
+timeCreated: 1432939236
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Cube
+    100004: Cube.001
+    100006: Cube.002
+    100008: Cube.003
+    100010: Cube.004
+    100012: Cube.005
+    100014: Cube.006
+    100016: Cube.007
+    100018: Cube.008
+    100020: Cube.009
+    100022: Cube.010
+    100024: Cube.011
+    100026: Cube.012
+    100028: Cube.013
+    100030: Cube.014
+    100032: Lamp
+    100034: //RootNode
+    100036: Floor
+    100038: InnerWall
+    100040: InnerWall.001
+    100042: InnerWall.002
+    100044: InnerWall.003
+    100046: Raised Section
+    100048: Raised Section.001
+    100050: Ramp
+    100052: Ramp.001
+    100054: Ramp.002
+    100056: Ramp.003
+    100058: Wall
+    100060: Wall.001
+    100062: Wall.002
+    100064: Wall.003
+    400000: Camera
+    400002: Cube
+    400004: Cube.001
+    400006: Cube.002
+    400008: Cube.003
+    400010: Cube.004
+    400012: Cube.005
+    400014: Cube.006
+    400016: Cube.007
+    400018: Cube.008
+    400020: Cube.009
+    400022: Cube.010
+    400024: Cube.011
+    400026: Cube.012
+    400028: Cube.013
+    400030: Cube.014
+    400032: Lamp
+    400034: //RootNode
+    400036: Floor
+    400038: InnerWall
+    400040: InnerWall.001
+    400042: InnerWall.002
+    400044: InnerWall.003
+    400046: Raised Section
+    400048: Raised Section.001
+    400050: Ramp
+    400052: Ramp.001
+    400054: Ramp.002
+    400056: Ramp.003
+    400058: Wall
+    400060: Wall.001
+    400062: Wall.002
+    400064: Wall.003
+    2300000: Cube
+    2300002: Cube.001
+    2300004: Cube.002
+    2300006: Cube.003
+    2300008: Cube.004
+    2300010: Cube.005
+    2300012: Cube.006
+    2300014: Cube.007
+    2300016: Cube.008
+    2300018: Cube.009
+    2300020: Cube.010
+    2300022: Cube.011
+    2300024: Cube.012
+    2300026: Cube.013
+    2300028: Cube.014
+    2300030: Floor
+    2300032: InnerWall
+    2300034: InnerWall.001
+    2300036: InnerWall.002
+    2300038: InnerWall.003
+    2300040: Raised Section
+    2300042: Raised Section.001
+    2300044: Ramp
+    2300046: Ramp.001
+    2300048: Ramp.002
+    2300050: Ramp.003
+    2300052: Wall
+    2300054: Wall.001
+    2300056: Wall.002
+    2300058: Wall.003
+    3300000: Cube
+    3300002: Cube.001
+    3300004: Cube.002
+    3300006: Cube.003
+    3300008: Cube.004
+    3300010: Cube.005
+    3300012: Cube.006
+    3300014: Cube.007
+    3300016: Cube.008
+    3300018: Cube.009
+    3300020: Cube.010
+    3300022: Cube.011
+    3300024: Cube.012
+    3300026: Cube.013
+    3300028: Cube.014
+    3300030: Floor
+    3300032: InnerWall
+    3300034: InnerWall.001
+    3300036: InnerWall.002
+    3300038: InnerWall.003
+    3300040: Raised Section
+    3300042: Raised Section.001
+    3300044: Ramp
+    3300046: Ramp.001
+    3300048: Ramp.002
+    3300050: Ramp.003
+    3300052: Wall
+    3300054: Wall.001
+    3300056: Wall.002
+    3300058: Wall.003
+    4300000: Cube.011
+    4300002: Cube.009
+    4300004: Cube.001
+    4300006: Cube
+    4300008: Cube.002
+    4300010: Cube.003
+    4300012: Cube.004
+    4300014: Cube.005
+    4300016: Cube.006
+    4300018: Cube.007
+    4300020: Cube.008
+    4300022: Cube.010
+    4300024: Cube.012
+    4300026: Cube.013
+    4300028: Cube.014
+    4300030: Ramp
+    4300032: Raised Section
+    4300034: Wall
+    4300036: Floor
+    4300038: Wall.001
+    4300040: Wall.002
+    4300042: Wall.003
+    4300044: InnerWall
+    4300046: InnerWall.001
+    4300048: InnerWall.002
+    4300050: InnerWall.003
+    4300052: Raised Section.001
+    4300054: Ramp.001
+    4300056: Ramp.002
+    4300058: Ramp.003
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
