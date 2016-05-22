@@ -53,6 +53,11 @@ public class Weapon : MonoBehaviour {
 
  	 }
 
+	 int GetWeaponDamage()
+	 {
+		 return 5;
+	 }
+
 	IEnumerator Shoot()
 	{
 		hitscanTransform.transform.localScale = new Vector3(200,40,7.5f);
@@ -67,6 +72,7 @@ public class Weapon : MonoBehaviour {
 			if (PointInOABB(allPlayers[i].transform.position, hitscanCollider))
 			{
 				Debug.Log("HIT " + allPlayers[i], allPlayers[i].gameObject);
+				allPlayers[i].GetComponent<PlayerStats>().TakeDamage(GetWeaponDamage());
 			}
 		}
 
