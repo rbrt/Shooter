@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace UnityStandardAssets.ImageEffects
@@ -25,6 +26,55 @@ namespace UnityStandardAssets.ImageEffects
 
         public Shader fogShader = null;
         private Material fogMaterial = null;
+
+        static float density = 0;
+        static float fogHeight = 0;
+
+        static GlobalFog instance;
+
+        void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+                density = heightDensity;
+                fogHeight = height;
+                this.StartCoroutine(AffectFog());
+                this.StartCoroutine(AffectFogHeight());
+            }
+        }
+
+        IEnumerator AffectFog()
+        {
+            while (true)
+            {
+                float targetDensity = UnityEngine.Random.Range(.7f, 10);
+                float currentDensity = density;
+                float interval = UnityEngine.Random.Range(4, 10);
+                for (float i = 0; i < 1; i += Time.deltaTime / interval)
+                {
+                    density = Mathf.Lerp(currentDensity, targetDensity, i);
+                    yield return null;
+                }
+                yield return new WaitForSeconds(UnityEngine.Random.Range(2,6));
+            }
+        }
+
+        IEnumerator AffectFogHeight()
+        {
+            while (true)
+            {
+                float targetHeight = UnityEngine.Random.Range(1f, 2f);
+                float currentHeight = fogHeight;
+                float interval = UnityEngine.Random.Range(2, 5);
+                for (float i = 0; i < 1; i += Time.deltaTime / interval)
+                {
+                    fogHeight = Mathf.Lerp(currentHeight, targetHeight, i);
+                    yield return null;
+                }
+                yield return new WaitForSeconds(UnityEngine.Random.Range(2,6));
+            }
+        }
 
 
         public override bool CheckResources ()
@@ -85,12 +135,12 @@ namespace UnityStandardAssets.ImageEffects
             frustumCorners.SetRow (3, bottomLeft);
 
 			var camPos= camtr.position;
-            float FdotC = camPos.y-height;
+            float FdotC = camPos.y-fogHeight;
             float paramK = (FdotC <= 0.0f ? 1.0f : 0.0f);
             float excludeDepth = (excludeFarPixels ? 1.0f : 2.0f);
             fogMaterial.SetMatrix ("_FrustumCornersWS", frustumCorners);
             fogMaterial.SetVector ("_CameraWS", camPos);
-            fogMaterial.SetVector ("_HeightParams", new Vector4 (height, FdotC, paramK, heightDensity*0.5f));
+            fogMaterial.SetVector ("_HeightParams", new Vector4 (fogHeight, FdotC, paramK, density*0.5f));
             fogMaterial.SetVector ("_DistanceParams", new Vector4 (-Mathf.Max(startDistance,0.0f), excludeDepth, 0, 0));
 
             var sceneMode= RenderSettings.fogMode;
