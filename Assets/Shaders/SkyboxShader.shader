@@ -2,7 +2,7 @@
 Properties {
 	[KeywordEnum(None, Simple, High Quality)] _SunDisk ("Sun", Int) = 2
 	_SunSize ("Sun Size", Range(0,1)) = 0.04
-	
+
 	_AtmosphereThickness ("Atmosphere Thickness", Range(0,5)) = 1.0
 	_SkyTint ("Sky Tint", Color) = (.5, .5, .5, 1)
 	_GroundColor ("Ground", Color) = (.369, .349, .341, 1)
@@ -211,7 +211,10 @@ SubShader {
 				float3 samplePoint = cameraPos + sampleRay * 0.5;
 
 				// Now loop through the sample rays
-				float3 frontColor = float3(0.0, 0.0, 0.0);
+				float tempX = abs(fmod(samplePoint.x, .01));
+				float tempY = fmod(samplePoint.y, .02);
+				//float3 frontColor = float3(1.0 * (sin(abs(fmod(samplePoint.x, .01) + fmod(samplePoint.z, .02))) * 10), 0.0, 0.0);
+				float3 frontColor = float3(1.0 * (sin(tempX + tempY) * 10), 0.0, 0.0);
 				// Weird workaround: WP8 and desktop FL_9_1 do not like the for loop here
 				// (but an almost identical loop is perfectly fine in the ground calculations below)
 				// Just unrolling this manually seems to make everything fine again.
@@ -224,8 +227,9 @@ SubShader {
 					float scatter = (startOffset + depth*(scale(lightAngle) - scale(cameraAngle)));
 					float3 attenuate = exp(-clamp(scatter, 0.0, kMAX_SCATTER) * (kInvWavelength * kKr4PI + kKm4PI));
 
-					frontColor += attenuate * (depth * scaledLength);
+					//frontColor += attenuate * (depth * scaledLength);
 					samplePoint += sampleRay;
+					//frontColor = float3(1,0,0);
 				}
 				{
 					float height = length(samplePoint);
@@ -235,7 +239,7 @@ SubShader {
 					float scatter = (startOffset + depth*(scale(lightAngle) - scale(cameraAngle)));
 					float3 attenuate = exp(-clamp(scatter, 0.0, kMAX_SCATTER) * (kInvWavelength * kKr4PI + kKm4PI));
 
-					frontColor += attenuate * (depth * scaledLength);
+					//frontColor += attenuate * (depth * scaledLength);
 					samplePoint += sampleRay;
 				}
 

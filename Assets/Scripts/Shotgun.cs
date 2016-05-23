@@ -40,7 +40,7 @@ public class Shotgun : Weapon
    public override IEnumerator FlashMuzzleFlare()
    {
 	   muzzleFlash.enabled = true;
-	   yield return new WaitForSeconds(.1f);
+	   yield return new WaitForSeconds(.25f);
 	   muzzleFlash.enabled = false;
    }
 }

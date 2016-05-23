@@ -142,6 +142,7 @@ Transform:
   m_LocalRotation: {x: 0.53562087, y: 0.53562075, z: -0.46163875, w: -0.46163893}
   m_LocalPosition: {x: 0.6519997, y: 0.16500002, z: 0.07199994}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 492976}
   m_RootOrder: 1
@@ -154,6 +155,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.70710665, z: 0, w: 0.7071069}
   m_LocalPosition: {x: -0.09484323, y: -0.0050471346, z: -0.103938125}
   m_LocalScale: {x: 1, y: 0.5, z: 1.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 438104}
   m_RootOrder: 0
@@ -166,6 +168,7 @@ Transform:
   m_LocalRotation: {x: 0.705169, y: 0.05231318, z: 0.05231324, w: -0.7051691}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 0.4999999}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 431344}
   m_Father: {fileID: 492976}
@@ -177,8 +180,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145668}
   m_LocalRotation: {x: 0, y: 0.9972596, z: 0, w: 0.07398206}
-  m_LocalPosition: {x: 0.77343917, y: 0.14999992, z: 0.11539075}
+  m_LocalPosition: {x: 0.77343917, y: 0.29, z: 0.11539075}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 171.5145, z: 0}
   m_Children: []
   m_Father: {fileID: 492976}
   m_RootOrder: 0
@@ -191,6 +195,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.70710665, z: 0, w: 0.7071069}
   m_LocalPosition: {x: -0.09484323, y: -0.0050471346, z: -0.103938125}
   m_LocalScale: {x: 1, y: 0.5, z: 1.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 474518}
   m_RootOrder: 0
@@ -203,6 +208,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.70710677, z: 0.7071068, w: -0.000000029802326}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 0.49999997}
+  m_LocalEulerAnglesHint: {x: -90, y: -180, z: 0}
   m_Children:
   - {fileID: 454784}
   m_Father: {fileID: 497472}
@@ -216,6 +222,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 449702}
   - {fileID: 408374}
@@ -232,6 +239,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.9972596, z: 0, w: 0.07398206}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 474518}
   m_Father: {fileID: 492976}
@@ -437,6 +445,7 @@ MonoBehaviour:
   hitscan: 1
   hitscanTransform: {fileID: 0}
   player: {fileID: 0}
+  weaponFireEffect: {fileID: 8300000, guid: 29de964550c1746b69694302dc3e3f1d, type: 3}
 --- !u!198 &19857400
 ParticleSystem:
   m_ObjectHideFlags: 1

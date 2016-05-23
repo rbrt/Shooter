@@ -2376,7 +2376,6 @@ Transform:
   - {fileID: 1697825641}
   - {fileID: 867668021}
   - {fileID: 211274884}
-  - {fileID: 1684729066}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!1 &1181119333
@@ -3070,68 +3069,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!1 &1684729064
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1684729066}
-  - 108: {fileID: 1684729065}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &1684729065
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1684729064}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 1
-  m_Color: {r: 0.9812462, g: 0.33501437, b: 0.27849463, a: 1}
-  m_Intensity: 0.4
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_BounceIntensity: 0.2
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &1684729066
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1684729064}
-  m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
-  m_LocalPosition: {x: 7.7169876, y: -3.150895, z: -1.7072941}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1089295583}
-  m_RootOrder: 4
 --- !u!1 &1697825639
 GameObject:
   m_ObjectHideFlags: 0
@@ -3505,22 +3442,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 911857493}
-    - target: {fileID: 11499982, guid: 051b1908d63264661a13cdebef156f93, type: 2}
-      propertyPath: weaponFireEffect
-      value: 
-      objectReference: {fileID: 8300000, guid: 29de964550c1746b69694302dc3e3f1d, type: 3}
-    - target: {fileID: 474518, guid: 051b1908d63264661a13cdebef156f93, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 474518, guid: 051b1908d63264661a13cdebef156f93, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
-      objectReference: {fileID: 0}
-    - target: {fileID: 145668, guid: 051b1908d63264661a13cdebef156f93, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 051b1908d63264661a13cdebef156f93, type: 2}
   m_IsPrefabParent: 0
