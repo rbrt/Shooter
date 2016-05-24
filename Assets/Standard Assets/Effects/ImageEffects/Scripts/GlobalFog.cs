@@ -48,7 +48,7 @@ namespace UnityStandardAssets.ImageEffects
         {
             while (true)
             {
-                float targetDensity = UnityEngine.Random.Range(.7f, 10);
+                float targetDensity = UnityEngine.Random.Range(7f, 10);
                 float currentDensity = density;
                 float interval = UnityEngine.Random.Range(4, 10);
                 for (float i = 0; i < 1; i += Time.deltaTime / interval)

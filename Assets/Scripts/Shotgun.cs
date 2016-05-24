@@ -13,10 +13,17 @@ public class Shotgun : Weapon
 		return (int)(damage * (1 - (distance / effectiveDistance)));
 	}
 
+    void Awake()
+    {
+        base.Awake();
+        hitscanTransform.transform.localScale = new Vector3(200,40,7.5f);
+        var pos = hitscanTransform.transform.localPosition;
+        pos.x += 100;
+        hitscanTransform.transform.localPosition = pos;
+    }
+
    public override IEnumerator Shoot()
    {
-        hitscanTransform.transform.localScale = new Vector3(200,40,7.5f);
-
         animator.Play("Fire");
         gunshotParticle.Play();
         this.StartCoroutine(FlashMuzzleFlare());
